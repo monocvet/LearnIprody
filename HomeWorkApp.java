@@ -5,11 +5,11 @@ public class HomeWorkApp {
         checkSumSign();
         printColor();
         compareNumbers();
-        checkLimitNumbers(5, 9);
+        System.out.println(checkLimitNumbers(5, 9));
         checkNumberType(-5);
-        checkNumberTypeLogical(8);
+        System.out.println(checkNumberTypeLogical(8));
         wordQuantity("Природа", 8);
-        leapYear(2026);
+        System.out.println(leapYear(2026));
 
     }
 
@@ -54,9 +54,9 @@ public class HomeWorkApp {
         }
     }
 
-    private static void checkLimitNumbers(int a, int b) {
+    private static boolean checkLimitNumbers(int a, int b) {
         boolean flag = (a + b >= 10) && (a + b <= 20);
-        System.out.println(flag);
+        return flag;
 
     }
 
@@ -68,9 +68,9 @@ public class HomeWorkApp {
         }
     }
 
-    private static void checkNumberTypeLogical(int a) {
+    private static boolean checkNumberTypeLogical(int a) {
         boolean flag = a < 0;
-        System.out.println(flag);
+        return flag;
     }
 
     private static void wordQuantity(String word, int quantity) {
@@ -80,9 +80,9 @@ public class HomeWorkApp {
         }
     }
 
-    private static void leapYear(int year) {
+    private static boolean leapYear(int year) {
         boolean flag = (year % 4 == 0) || (year % 400 == 0 && year % 100 != 0);
-        System.out.println(flag);
+        return flag;
     }
 
 }
